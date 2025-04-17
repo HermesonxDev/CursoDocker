@@ -1,0 +1,34 @@
+nome: "Matheus"
+idade: 30
+
+objeto:
+  versao: 2
+  arquivo: "teste.txt"
+
+inteiro: 2
+flutuante: 3.14
+
+string_sem_aspas: Digite um texto aqui
+string_com_aspas: "Este tambem e um texto valido para o YAML"
+
+nulo: ~
+nulo_dois: null
+
+verdadeiro: True
+verdadeiro_dois: On
+
+falso: False
+falso_dois: Off
+
+lista: [2, "producao", False, ~]
+lista_dois:
+  - 1
+  - "teste"
+  - True
+  - null
+
+dicionario: {a: 1, b: 2, c: 3}
+dicionario_dois:
+  a: 1
+  b: 2
+  c: 3
