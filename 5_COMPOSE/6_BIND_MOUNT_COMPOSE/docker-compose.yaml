@@ -1,0 +1,29 @@
+version: '3.3'
+
+services:
+  db:
+    build: ./mysql/
+    image: mysqlcompose
+    restart: always
+    env_file:
+      - ./config/db.env
+    ports:
+     - "3306:3306"
+    networks:
+      - dockercompose
+
+  backend:
+    depends_on:
+      - db
+    build: ./flask/
+    image: flaskcompose
+    ports:
+      - "5001:5000"
+    restart: always
+    volumes:
+      - "C:\\Users\\rober\\Downloads\\CursoDocker\\5_COMPOSE\\6_BIND_MOUNT_COMPOSE\\flask:/app"
+    networks:
+      - dockercompose
+
+networks:
+  dockercompose:
