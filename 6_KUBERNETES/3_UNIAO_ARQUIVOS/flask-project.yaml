@@ -28,5 +28,5 @@ spec:
   ports:
     - protocol: TCP
       port: 5000
-      targetPort: 5001
-  type: LoadBalancer
+      targetPort: 5000
+  type: NodePort
